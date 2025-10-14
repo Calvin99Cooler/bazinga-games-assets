@@ -1,7 +1,7 @@
 {
 "companyName": "MSG",
 "productName": "ScrapMetal 3",
-"dataUrl": "ScrapMetal3.data.unityweb",
+"dataUrl": "https://raw.githubusercontent.com/Calvin99Cooler/bazinga-games-assets/refs/heads/main/scrapmetal3/ScrapMetal3.data.unityweb",
 "wasmCodeUrl": "ScrapMetal3.wasm.code.unityweb",
 "wasmFrameworkUrl": "ScrapMetal3.wasm.framework.unityweb",
 "TOTAL_MEMORY": 486539264,
