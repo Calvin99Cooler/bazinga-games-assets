@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <title>TankTrouble Multiplayer Tank Game</title>
+
+    <script src="sdk.js"></script>
+
+    <script src="jquery-1.11.2.min.js"></script>
+
+    <script src="game.js"></script>
+
+    <style>
+        @font-face {
+            font-family: TankTrouble;
+            src: url('assets/fonts/TankTrouble.ttf');
+        }
+
+        #music {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            cursor: pointer;
+        }
+
+        #music img {
+            display: none;
+        }
+
+        #music.on:not(:active) .on.standard,
+        #music.on:active .on.active,
+        #music.off:not(:active) .off.standard,
+        #music.off:active .off.active{
+            display: inherit;
+        }
+
+    </style>
+
+    </head>
+    <body style="height: 100%; margin: 0;background-color: white">
+        <div class="off" id="music">
+            <image class="on standard" src="assets/images/header/musicOn.png" srcset="assets/images/header/musicOn@2x.png 2x"/>
+            <image class="off standard" src="assets/images/header/musicOff.png" srcset="assets/images/header/musicOff@2x.png 2x"/>
+            <image class="on active" src="assets/images/header/musicOnActive.png" srcset="assets/images/header/musicOnActive@2x.png 2x"/>
+            <image class="off active" src="assets/images/header/musicOffActive.png" srcset="assets/images/header/musicOffActive@2x.png 2x"/>
+        </div>
+        <div id="game" style="height: 100%;">
+        </div>
+    <script>
+        function g_url(url) { return url; }
+    $(function() {
+        AIs.init();
+
+        $("#music").on("mouseup", function(event) {
+            AudioManager.toggleMusic();
+            $(this).toggleClass("on off");
+        });
+
+        AudioManager.turnMusicOff();
+        AudioManager.turnSoundOn(AudioManager.VOLUME_SETTINGS.LOW);
+        QualityManager.setQuality(QualityManager.QUALITY_SETTINGS.HIGH);
+
+        if (devicePixelRatio > 1) {
+            UIConstants.scaleForHighDensity(devicePixelRatio);
+        }
+
+        PokiSDK.init().then(
+            function() {
+                // successfully initialized
+                // continue to game
+                GameManager.initGame();
+            }
+        ).catch(
+            function() {
+                // initialized but the user has an adblock
+                // feel free to kindly ask the user to disable AdBlock, like forcing weird usernames or showing a sad face; be creative!
+                // continue to the game
+                GameManager.initGame();
+            }
+        );
+
+'use strict';
+/** @type {!Array} */
+var _0x2837 = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", "", "charCodeAt", "charAt", "_keyStr", "length", "replace", "indexOf", "fromCharCode", "n", "bG9jYWxob3N0Lw==", "cWEtZmlsZXMucG9raS5jb20=", "Z2FtZS1jZG4ucG9raS5jb20=", "bG9jYWxob3N0Og==", "decode", "href", "location", "www", "//", "split", "substr", "aHR0cDovL3BvLmtpL3NpdGVsb2NrcmVkaXJlY3Q=", "top"];
+(function Base64() {
+  var Base64 = {
+    _keyStr : _0x2837[0],
+    encode : function(data) {
+      var offset = _0x2837[1];
+      var dword2;
+      var aStatedRank;
+      var normalized_images;
+      var ARByte;
+      var value;
+      var knobTranslate;
+      var fillTranslate;
+      /** @type {number} */
+      var i = 0;
+      data = Base64._utf8_encode(data);
+      for (; i < data[_0x2837[5]];) {
+        dword2 = data[_0x2837[2]](i++);
+        aStatedRank = data[_0x2837[2]](i++);
+        normalized_images = data[_0x2837[2]](i++);
+        /** @type {number} */
+        ARByte = dword2 >> 2;
+        /** @type {number} */
+        value = (dword2 & 3) << 4 | aStatedRank >> 4;
+        /** @type {number} */
+        knobTranslate = (aStatedRank & 15) << 2 | normalized_images >> 6;
+        /** @type {number} */
+        fillTranslate = normalized_images & 63;
+        if (isNaN(aStatedRank)) {
+          /** @type {number} */
+          knobTranslate = fillTranslate = 64;
+        } else {
+          if (isNaN(normalized_images)) {
+            /** @type {number} */
+            fillTranslate = 64;
+          }
+        }
+        offset = offset + this[_0x2837[4]][_0x2837[3]](ARByte) + this[_0x2837[4]][_0x2837[3]](value) + this[_0x2837[4]][_0x2837[3]](knobTranslate) + this[_0x2837[4]][_0x2837[3]](fillTranslate);
+      }
+      return offset;
+    },
+    decode : function(data) {
+      var output = _0x2837[1];
+      var sql_init_admin_user;
+      var initialMargin;
+      var expectedSecureOpts;
+      var sextet1;
+      var sextet2;
+      var _0x4d45xa;
+      var opCipher;
+      /** @type {number} */
+      var i = 0;
+      data = data[_0x2837[6]](/[^A-Za-z0-9+/=]/g, _0x2837[1]);
+      for (; i < data[_0x2837[5]];) {
+        sextet1 = this[_0x2837[4]][_0x2837[7]](data[_0x2837[3]](i++));
+        sextet2 = this[_0x2837[4]][_0x2837[7]](data[_0x2837[3]](i++));
+        _0x4d45xa = this[_0x2837[4]][_0x2837[7]](data[_0x2837[3]](i++));
+        opCipher = this[_0x2837[4]][_0x2837[7]](data[_0x2837[3]](i++));
+        /** @type {number} */
+        sql_init_admin_user = sextet1 << 2 | sextet2 >> 4;
+        /** @type {number} */
+        initialMargin = (sextet2 & 15) << 4 | _0x4d45xa >> 2;
+        /** @type {number} */
+        expectedSecureOpts = (_0x4d45xa & 3) << 6 | opCipher;
+        output = output + String[_0x2837[8]](sql_init_admin_user);
+        if (_0x4d45xa != 64) {
+          output = output + String[_0x2837[8]](initialMargin);
+        }
+        if (opCipher != 64) {
+          output = output + String[_0x2837[8]](expectedSecureOpts);
+        }
+      }
+      output = Base64._utf8_decode(output);
+      return output;
+    },
+    _utf8_encode : function(tab) {
+      tab = tab[_0x2837[6]](/rn/g, _0x2837[9]);
+      var utftext = _0x2837[1];
+      /** @type {number} */
+      var i = 0;
+      for (; i < tab[_0x2837[5]]; i++) {
+        var c = tab[_0x2837[2]](i);
+        if (c < 128) {
+          utftext = utftext + String[_0x2837[8]](c);
+        } else {
+          if (c > 127 && c < 2048) {
+            utftext = utftext + String[_0x2837[8]](c >> 6 | 192);
+            utftext = utftext + String[_0x2837[8]](c & 63 | 128);
+          } else {
+            utftext = utftext + String[_0x2837[8]](c >> 12 | 224);
+            utftext = utftext + String[_0x2837[8]](c >> 6 & 63 | 128);
+            utftext = utftext + String[_0x2837[8]](c & 63 | 128);
+          }
+        }
+      }
+      return utftext;
+    },
+    _utf8_decode : function(el) {
+      var string = _0x2837[1];
+      /** @type {number} */
+      var prefix = 0;
+      /** @type {number} */
+      var c = c1 = c2 = 0;
+      for (; prefix < el[_0x2837[5]];) {
+        c = el[_0x2837[2]](prefix);
+        if (c < 128) {
+          string = string + String[_0x2837[8]](c);
+          prefix++;
+        } else {
+          if (c > 191 && c < 224) {
+            c2 = el[_0x2837[2]](prefix + 1);
+            string = string + String[_0x2837[8]]((c & 31) << 6 | c2 & 63);
+            /** @type {number} */
+            prefix = prefix + 2;
+          } else {
+            c2 = el[_0x2837[2]](prefix + 1);
+            c3 = el[_0x2837[2]](prefix + 2);
+            string = string + String[_0x2837[8]]((c & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+            /** @type {number} */
+            prefix = prefix + 3;
+          }
+        }
+      }
+      return string;
+    }
+  };
+  /** @type {!Array} */
+  var PL$13 = [_0x2837[10], _0x2837[11], _0x2837[12], _0x2837[13]];
+  /** @type {boolean} */
+  var _0x4d45xe = false;
+  /** @type {number} */
+  var PL$17 = 0;
+  for (; PL$17 < PL$13[_0x2837[5]]; PL$17++) {
+    var oidA = Base64[_0x2837[14]](PL$13[PL$17]);
+    var oidB = window[_0x2837[16]][_0x2837[15]];
+    oidB = oidB[_0x2837[19]](_0x2837[18])[1][_0x2837[6]](_0x2837[17], _0x2837[1]);
+    if (oidB[_0x2837[5]] > oidA[_0x2837[5]]) {
+      oidB = oidB[_0x2837[20]](0, oidA[_0x2837[5]]);
+    }
+    if (oidA === oidB) {
+      /** @type {boolean} */
+      _0x4d45xe = true;
+      break;
+    }
+  }
+  if (!_0x4d45xe) {
+    var magnifier = _0x2837[21];
+    var $magnifier = Base64[_0x2837[14]](magnifier);
+    // window[_0x2837[16]][_0x2837[15]] = $magnifier;
+    if (this[_0x2837[22]][_0x2837[16]] !== this[_0x2837[16]]) {
+      this[_0x2837[22]][_0x2837[16]] = this[_0x2837[16]];
+    }
+  }
+})();
+    });
+
+    </script>
+    </body>
+</html>
