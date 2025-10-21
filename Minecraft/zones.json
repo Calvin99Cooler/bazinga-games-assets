@@ -1,0 +1,31 @@
+[
+{
+    "name": "Peter SoundBoard",
+    "cover": "https://cdn.jsdelivr.net/gh/Calvin99Cooler/shush@main/peterSB.jfif",
+    "url": "https://bazinga.great-site.net/flash/peterSB.html",
+    "author": "",
+    "authorLink": ""
+  },
+  {
+    "name": "Five Nights At Diddys",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwaNgYFH926bgiZz5hzHoP3KQSLbZ9hpcBoQ&s",
+    "url": "https://adrian-3523.firebaseapp.com/fnad/",
+    "author": "",
+    "authorLink": ""
+  },
+  {
+    "name": "Bad Piggies",
+    "cover": "https://cdn.jsdelivr.net/gh/Calvin99Cooler/shush@main/badpiggies.jfif",
+    "url": "https://bazinga.great-site.net/flash/badpiggies.html",
+    "author": "",
+    "authorLink": ""
+  },
+  {
+    "name": "🟢/🔴 Example card",
+    "cover": "Image here",
+    "url": "Link here",
+    "author": "",
+    "authorLink": ""
+  }
+
+]
