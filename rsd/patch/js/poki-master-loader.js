@@ -29,7 +29,7 @@ if (!window.config.unityWebglLoaderUrl) {
     }
 }
 var sdkScript = document.createElement("script");
-sdkScript.src = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/rsd/patch/js/poki-sdk-v2.js",
+sdkScript.src = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@latest/rsd/patch/js/poki-sdk-v2.js",
 sdkScript.onload = function() {
     var i = document.createElement("script");
     i.src = root + loader,
