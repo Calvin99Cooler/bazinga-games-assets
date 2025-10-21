@@ -9,12 +9,9 @@
         var e = this;
         (this.queue = []),
           (this.init = function (n) {
-            return (
-              void 0 === n && (n = {}),
-              new Promise(function (o, t) {
-                e.enqueue("init", n, o, t);
-              })
-            );
+            return void 0 === n && (n = {}), new Promise(function (o, t) {
+              e.enqueue("init", n, o, t);
+            });
           }),
           (this.rewardedBreak = function () {
             return new Promise(function (e) {
@@ -80,34 +77,52 @@
         e
       );
     })())();
-  (window.PokiSDK = { init: o.init, initWithVideoHB: o.init, customEvent: o.throwNotLoaded, destroyAd: o.throwNotLoaded, getLeaderboard: o.handleAutoResolvePromiseObj }),
-    ["disableProgrammatic", "gameLoadingStart", "gameLoadingFinished", "gameInteractive", "roundStart", "roundEnd", "muteAd"].forEach(function (e) {
-      window.PokiSDK[e] = o.noArguments(e);
-    }),
-    [
-      "setDebug",
-      "gameplayStart",
-      "gameplayStop",
-      "gameLoadingProgress",
-      "happyTime",
-      "setPlayerAge",
-      "togglePlayerAdvertisingConsent",
-      "toggleNonPersonalized",
-      "setConsentString",
-      "logError",
-      "sendHighscore",
-      "setDebugTouchOverlayController",
-    ].forEach(function (e) {
-      window.PokiSDK[e] = o.oneArgument(e);
-    });
-  var t,
-    i = ((t = window.pokiSDKVersion) || (t = e("ab") || "v2.234.2"), "poki-sdk-" + (n ? "kids" : "core") + "-" + t + ".js"),
-    r = document.createElement("script");
-  r.setAttribute("src", i),
-    r.setAttribute("type", "text/javascript"),
-    r.setAttribute("crossOrigin", "anonymous"),
-    (r.onload = function () {
-      return o.dequeue();
-    }),
-    document.head.appendChild(r);
+
+  (window.PokiSDK = {
+    init: o.init,
+    initWithVideoHB: o.init,
+    customEvent: o.throwNotLoaded,
+    destroyAd: o.throwNotLoaded,
+    getLeaderboard: o.handleAutoResolvePromiseObj,
+  });
+
+  [
+    "disableProgrammatic",
+    "gameLoadingStart",
+    "gameLoadingFinished",
+    "gameInteractive",
+    "roundStart",
+    "roundEnd",
+    "muteAd",
+  ].forEach(function (e) {
+    window.PokiSDK[e] = o.noArguments(e);
+  });
+
+  [
+    "setDebug",
+    "gameplayStart",
+    "gameplayStop",
+    "gameLoadingProgress",
+    "happyTime",
+    "setPlayerAge",
+    "togglePlayerAdvertisingConsent",
+    "toggleNonPersonalized",
+    "setConsentString",
+    "logError",
+    "sendHighscore",
+    "setDebugTouchOverlayController",
+  ].forEach(function (e) {
+    window.PokiSDK[e] = o.oneArgument(e);
+  });
+
+  // **Load the SDK from your specific URL**
+  var sdkScript = document.createElement("script");
+  sdkScript.src =
+    "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/subway-surfers/poki-sdk-core-v2.234.2.js";
+  sdkScript.type = "text/javascript";
+  sdkScript.crossOrigin = "anonymous";
+  sdkScript.onload = function () {
+    o.dequeue();
+  };
+  document.head.appendChild(sdkScript);
 })();
