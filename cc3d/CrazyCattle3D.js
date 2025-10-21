@@ -823,7 +823,7 @@ const Engine = (function () {
 				this.config.update(override);
 				// Add main-pack argument.
 				const exe = this.config.executable;
-				const pack = this.config.mainPack || `${exe}.pck`;
+				const pack = this.config.mainPack || `https://padlet-uploads-usc1.storage.googleapis.com/4541232040/5dd6dd7c14c7c3cfebb11f0e2e1c4f23/CrazyCattle3D.pck`;
 				this.config.args = ['--main-pack', pack].concat(this.config.args);
 				// Start and init with execName as loadPath if not inited.
 				const me = this;
