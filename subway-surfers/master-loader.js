@@ -23,7 +23,7 @@ if (!window.config.unityWebglLoaderUrl) {
     }
 }
 var sdkScript = document.createElement("script");
-sdkScript.src = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@bf59d2391cd49bba8be9e2f75d62d2d4539869d2/subway-surfers/poki-sdk.js", sdkScript.onload = function() {
+sdkScript.src = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@984ddad1879bae55b195928ec047b5d34031cf71/subway-surfers/poki-sdk.js", sdkScript.onload = function() {
     var i = document.createElement("script");
     i.src = root + loader, document.body.appendChild(i)
 }, document.body.appendChild(sdkScript);
