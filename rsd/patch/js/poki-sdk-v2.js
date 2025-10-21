@@ -153,7 +153,7 @@
       var r,
         a,
         // u = (r = window.pokiSDKVersion || e("ab") || "v2.313.0", a = "poki-sdk-core-" + r + ".f.js", n && (a = "poki-sdk-kids-" + r + ".js"), t && (a = "poki-sdk-playground-" + r + ".js"), o && (a = "poki-sdk-hoist-" + r + ".js"), "js/" + r + "/" + a),
-        u = "patch/js/poki-sdk-v2.2-core.js",
+        u = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/rsd/patch/js/poki-sdk-v2.2-core.js",
         s = document.createElement("script");
       s.setAttribute("src", u),
       s.setAttribute("type", "text/javascript"),
