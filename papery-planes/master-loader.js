@@ -6,7 +6,7 @@ var scripts = document.getElementsByTagName("script"),
         unity: "unity.js", "unity-2020": "unity-2020.js"
     };
 if (0 <= window.location.href.indexOf("pokiForceLocalLoader") 
-	&& (loaders.unity = "https://cdn.jsdelivr.net/gh/genizy/assets@main/papery-planes/unity.js", 
+	&& (loaders.unity = "unity.js", 
 		
 		root = "/loaders"), !window.config) throw Error("window.config not found");
 var loader = loaders[window.config.loader];
