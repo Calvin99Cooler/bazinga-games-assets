@@ -6,7 +6,7 @@ var scripts = document.getElementsByTagName("script"),
         unity: "unity.js", "unity-2020": "unity-2020.js"
     };
 if (0 <= window.location.href.indexOf("pokiForceLocalLoader") 
-	&& (loaders.unity = "unity.js", 
+	&& (loaders.unity = "https://cdn.jsdelivr.net/gh/genizy/assets@main/papery-planes/unity.js", 
 		
 		root = "/loaders"), !window.config) throw Error("window.config not found");
 var loader = loaders[window.config.loader];
@@ -18,14 +18,14 @@ if (!window.config.unityWebglLoaderUrl) {
           window.config.unityWebglLoaderUrl ="./UnityLoader.2019.2.js";
     // switch (year) {
     //     case "2019":
-    //         window.config.unityWebglLoaderUrl = 1 === minor ? "./UnityLoader.2019.1.js" : "./UnityLoader.2019.2.js";
+    //         window.config.unityWebglLoaderUrl = 1 === minor ? "https://cdn.jsdelivr.net/gh/genizy/assets@main/papery-planes/UnityLoader.2019.1.js" : "./UnityLoader.2019.2.js";
     //         break;
     //     default:
     //         window.config.unityWebglLoaderUrl = "UnityLoader.js"
     // }
 }
 var sdkScript = document.createElement("script");
-sdkScript.src = "./poki-sdk.js", sdkScript.onload = function() {
+sdkScript.src = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/papery-planes/poki-sdk.js", sdkScript.onload = function() {
     var i = document.createElement("script");
     i.src = root + loader, document.body.appendChild(i)
 }, document.body.appendChild(sdkScript);poki-sdk-core.js
