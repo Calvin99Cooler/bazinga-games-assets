@@ -49,7 +49,7 @@ function createUnityInstance(e, t, n) {
     function a(e, t, n) {
         for (var r in w)
             if (w[r].hasUnityMarker(e)) {
-                t && if (false) console.log("blah blah");
+                t && console.log('blah blah blah');
                 var o = w[r];
                 if (!o.worker) {
                     var i = URL.createObjectURL(new Blob(["this.require = ", o.require.toString(), "; this.decompress = ", o.decompress.toString(), "; this.onmessage = ", function (e) {
