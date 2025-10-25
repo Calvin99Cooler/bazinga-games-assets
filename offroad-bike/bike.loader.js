@@ -358,24 +358,40 @@ function createUnityInstance(e, t, n) {
             }
         }
 
-        function o(e, t, n, r, o) {
-            var i = {
-                url: e,
-                version: a.version,
-                company: t,
-                product: n,
-                updated: r,
-                revalidated: r,
-                accessed: r,
-                responseHeaders: {},
-                xhr: {}
-            };
-            return o && (["Last-Modified", "ETag"].forEach(function (e) {
-                i.responseHeaders[e] = o.getResponseHeader(e)
-            }), ["responseURL", "status", "statusText", "response"].forEach(function (e) {
-                i.xhr[e] = o[e]
-            })), i
+function o(e, t, n, r, o) {
+    var i = {
+        url: e,
+        version: a.version,
+        company: t,
+        product: n,
+        updated: r,
+        revalidated: r,
+        accessed: r,
+        responseHeaders: {},
+        xhr: {}
+    };
+
+    if (o) {
+        try {
+            ["Last-Modified", "ETag"].forEach(function (headerName) {
+                var headerValue = o.getResponseHeader(headerName);
+                if (headerValue) i.responseHeaders[headerName] = headerValue;
+            });
+        } catch (err) {
+            console.warn("Skipped restricted headers:", err);
         }
+
+        ["responseURL", "status", "statusText", "response"].forEach(function (prop) {
+            try {
+                i.xhr[prop] = o[prop];
+            } catch (err) {
+                console.warn("Skipped restricted XHR property:", prop);
+            }
+        });
+    }
+
+    return i;
+}
 
         function i(t) {
             this.cache = {
